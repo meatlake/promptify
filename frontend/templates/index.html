@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promptify</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Promptify 🎵</h1>
+        <form method="post" action="/generate">
+            <input type="text" name="prompt" placeholder="Describe your vibe..." required />
+            <button type="submit">Generate Playlist</button>
+        </form>
+        {% if playlist_url %}
+            <p>🎧 Your playlist: <a href="{{ playlist_url }}" target="_blank">Listen on Spotify</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
